@@ -1,0 +1,4 @@
+rootProject.name = 'shipopotamus'
+include 'application'
+include 'authentication'
+
