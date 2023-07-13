@@ -22,3 +22,8 @@ Executing via `java -jar <path to jar file>`
 # How to run
 
 `./gradlew :application:bootRun`
+
+
+# Database
+
+`docker run --name shipopotamus_database -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=shipopotamus -d -p 5432:5432 postgres:15.3`

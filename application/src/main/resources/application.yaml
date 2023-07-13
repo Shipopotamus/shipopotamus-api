@@ -1,1 +1,13 @@
-
+authentication:
+  database:
+    host: localhost
+    port: 5432
+    username: postgres
+    password: postgres
+    databaseName: shipopotamus
+    schemaName: authentication
+spring:
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+      - org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration
