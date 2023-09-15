@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configuration>
+    <jdbc>
+        <driver>org.postgresql.Driver</driver>
+        <url>jdbc:postgresql://localhost:5555/shipopotamus</url>
+        <user>postgres</user>
+        <password>postgres</password>
+    </jdbc>
+
+    <generator>
+        <database>
+            <name>org.jooq.meta.postgres.PostgresDatabase</name>
+            <includes>.*</includes>
+            <excludes>flyway_schema_history</excludes>
+            <inputSchema>authentication_schema</inputSchema>
+        </database>
+
+        <target>
+            <packageName>com.github.shipopotamus.authentication.adapters.jooq.model</packageName>
+            <directory>../authentication/src/main/java</directory>
+        </target>
+    </generator>
+</configuration>
