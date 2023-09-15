@@ -19,9 +19,19 @@ dependencies {
 
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.jooq:jooq-codegen'
+    implementation 'org.testcontainers:postgresql'
+    implementation 'org.flywaydb:flyway-core'
 
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     compileOnly 'org.projectlombok:lombok'
 
     annotationProcessor 'org.projectlombok:lombok'
+}
+
+tasks.register('generateDatabaseModel', JavaExec) {
+    description = 'Generates database model based on schema derived from Flyway migrations.'
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'com.github.shipopotamus.config.JooqCodeGenerator'
+    args = ["${project.rootDir}"]
 }
