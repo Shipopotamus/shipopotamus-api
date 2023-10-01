@@ -5,7 +5,7 @@ authentication:
     username: postgres
     password: postgres
     databaseName: shipopotamus
-    schemaName: authentication
+    schemaName: authentication_schema
 spring:
   autoconfigure:
     exclude:
