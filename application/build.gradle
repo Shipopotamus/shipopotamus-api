@@ -22,6 +22,7 @@ dependencies {
     implementation 'org.jooq:jooq-codegen'
     implementation 'org.testcontainers:postgresql'
     implementation 'org.flywaydb:flyway-core'
+    implementation 'org.springframework.security:spring-security-crypto'
 
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     compileOnly 'org.projectlombok:lombok'
